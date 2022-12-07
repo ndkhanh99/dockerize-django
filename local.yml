@@ -39,12 +39,12 @@ services:
     container_name: frontend
     restart: always
     build:  
-      context: ./front-end
+      context: ./frontend
       dockerfile: Dockerfile
     image: myproj_frontend_image
     depends_on:
       - django
     volumes:
-      - ./front-end/nginx:/etc/nginx/conf.d
+      - ./frontend/nginx:/etc/nginx/conf.d
     ports:
       - 81:80
